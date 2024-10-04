@@ -154,6 +154,8 @@ function newwindow(id, title, content, height, width) {
                         // translate when resizing from top or left edges
                         x += event.deltaRect.left
                         y += event.deltaRect.top
+                        x = Math.max(0, x)
+                        y = Math.max(0, y)
 
                         // Ensure window does not slip too far up or left
                         x = Math.max(0, x);
